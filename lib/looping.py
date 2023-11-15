@@ -5,20 +5,14 @@ def happy_new_year():
     while i > 0:
         print(i)
         i -=1
-    if i == 0:
-        print("Happy New Year!")
+    print("Happy New Year!")
 
 
 def square_integers(int_list):
-    squared_integers = []
-    for integer in int_list:
-        squared_integer = integer * integer
-        squared_integers.append(squared_integer)
-    return squared_integers
+    return [integer ** 2 for integer in int_list]
 
 def fizzbuzz():
-    i = 1
-    while i < 101:
+    for i in range (1, 101):
         if (i% 3 == 0) and (i% 5 == 0):
             print("FizzBuzz")
         elif (i% 3 == 0):
@@ -27,6 +21,3 @@ def fizzbuzz():
             print("Buzz")
         else:
             print(i)
-        i += 1
-
-fizzbuzz()
